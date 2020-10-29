@@ -1,0 +1,25 @@
+:root {
+    font-size: 60%;
+
+    --color-primary: #282A36;
+    --color-secondary: #191A21;
+    --color-green-dracula: #50FA7B;
+    --color-pure-white: #FFFFFF;
+    --color-white-text: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+#root {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
