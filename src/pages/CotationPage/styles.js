@@ -3,22 +3,16 @@ import styled from 'styled-components';
 export const CotationPageContainer = styled.div`
     align-items: center;
     background-image: linear-gradient(var(--color-primary) 50%, var(--color-pure-white) 50%);
-    display: flex;
+    display: grid;
+    grid-template-areas:
+        "cotation"
+        "fields"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
     height: 100vh;
     justify-content: center;
     width: 100vw;
-
-    @media (max-width: 900px ) {
-        & {
-            display: grid;
-            grid-template-areas:
-                "cotation"
-                "fields"
-            ;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-    }
 `;
 
 export const Fields = styled.div`
@@ -35,14 +29,23 @@ export const Fields = styled.div`
 `;
 
 export const CotationValue = styled.h1`
+    ::-webkit-scrollbar   {
+        display: none;
+    }
+
     align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 6rem;
     color: var(--color-green-dracula);
     display: flex;
-    font: 700 20rem Poppins;
+    font: 700 15rem Poppins;
     grid-area: cotation;
-    justify-content: center;
-    margin-left: 1rem;
-    position: relative;
+    height: 290px;
+    justify-content: space-between;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 0 5rem;
+    width: 90%;
 
     span {
         font-size: 8rem;
@@ -51,14 +54,13 @@ export const CotationValue = styled.h1`
     @media (max-width: 900px ) {
         & {
             align-items: flex-center;
-            font-size: 5rem;
-            height: 50vh;
-            margin-left: 0;
-            width: 100%;
+            border-radius: 4rem;
+            font-size: 6rem;
+            height: 150px;
         }
 
         span {
-            font-size: 2rem;
+            font-size: 3rem;
         }
     }
 `;

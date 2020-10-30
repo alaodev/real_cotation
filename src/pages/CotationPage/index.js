@@ -29,7 +29,7 @@ export default function CotationPage() {
             </Fields>
             <CotationValue>
                 <span>R$</span>
-                {cotation}
+                <div>{cotation}</div>
             </CotationValue>
         </CotationPageContainer>
     );

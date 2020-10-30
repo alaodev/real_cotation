@@ -2,10 +2,23 @@ import styled from 'styled-components';
 
 export const SelectContainer = styled.select`
     border: 0;
-    border-radius: 2rem;
+    border-radius: 3rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    height: 6rem;
-    margin: 0 1rem;
-    padding: 0 2rem;
-    width: 90px;
+    color: var(--color-grey-text);
+    font: 700 2.5rem Poppins;
+    height: 10rem;
+    margin: 0 2rem;
+    padding: 0 4rem;
+    width: 175px;
+
+    @media (max-width: 900px ) {
+        & {
+            border-radius: 2rem;
+            font: 700 1.6rem Poppins;
+            height: 6rem;
+            margin: 0 1rem;
+            padding: 0 2rem;
+            width: 100px;
+        }
+    }
 `;
